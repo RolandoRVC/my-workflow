@@ -9,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         filename: 'js/bundle.js'
     },
+    resolve: {
+        extensions: ['*', '.mjs', '.js', '.svelte'],
+    }, 
     devtool: 'source-map',
     devServer: {
         port: 5000,
@@ -16,6 +19,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.svelte$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: 'svelte-loader'
+                }
+            },
             {
                 test: /\.hbs$/,
                 loader: 'handlebars-loader'
