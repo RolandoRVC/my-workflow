@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+
+#contenido{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    transform: translateY(5rem);
+
+    #imagen{
+        justify-self: center;
+        width: 9rem;
+    }
+    #texto-imagen{
+        font-family: 'McLaren', cursive;
+        ;
+    }
+
+}
